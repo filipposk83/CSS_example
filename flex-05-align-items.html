@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flex-Align-Items</title>
+    <style>
+        p,
+        div {
+            border: 1px solid gray;
+        }
+        p {
+            border-color: orange;
+            overflow: visible;
+            margin: 0;
+
+        }
+        .flex-wrapper {
+            display: flex;
+        }
+        span {
+            border: 1px solid green;
+        }
+        .row {
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            align-items: flex-start;
+            align-items: stretch;
+            align-items: flex-end;
+            align-items: baseline;
+            height: 250px;
+            flex-wrap: wrap;
+        }
+        .row p {
+            min-width: 50%;
+        }
+        .column {
+            flex-direction: column;
+        }
+        .centered {
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="centered">
+        <h1>CENTER</h1>
+    </div>
+    <h1>Display Flex & Flex Direction</h1>
+    <p>Today the weather is fine.</p>
+    <div class="flex-wrapper row">
+        <p>One</p>
+        <p>Two</p>
+        <p>Three</p>
+    </div>
+    <div class="flex-wrapper column">
+        <p>One</p>
+        <p>Two</p>
+        <p>Three</p>
+    </div>
+    <p>Another Text</p>
+</body>
+
+</html>

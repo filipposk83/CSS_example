@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Transforms</title>
+    <style>
+        #box {
+            background-color: tomato;
+            width: 100px;
+            height: 100px;
+            transition: all 3s ease;
+        }
+        #box:hover {
+            transform: scale(1.2, 0.5);
+        }
+        #circle {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            border-radius: 50%;
+            transition: all 3s ease;
+        }
+        #circle:hover {
+            transform: translate(50px, 50px);
+        }
+        #box2 {
+            width: 100px;
+            height: 100px;
+            background-color: yellowgreen;
+            transition: all 3s ease;
+        }
+        #box2:hover {
+            transform: rotate(45deg);
+        }
+        p {
+            background-color: skyblue;
+            color: black;
+            width: 200px;
+            transition: transform 3s ease;
+            transform: rotate(0deg) translate(0px, 0px) scale(1);
+        }
+        p.animated {
+            transform: rotate(5deg) translate(50px, -20px) scale(1.4);
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Transforms</h1>
+    <div id="box">CONTENT</div>
+    <div id="circle"></div>
+    <div id="box2"></div>
+    <p>Text content...</p>
+    <script>
+        let box = document.querySelector("#box2");
+        let p = document.querySelector("p");
+        p.innerText = "Dynamic content";
+        box.addEventListener("click", handleClick);
+        function handleClick(){
+            p.classList.toggle("animated");
+        }
+    </script>
+</body>
+</html>

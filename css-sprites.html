@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Sprites</title>
+    <!-- 2150px X 260px -->
+    <style>
+        body {
+            background-color: skyblue;
+            margin: 0;
+            overflow: hidden;
+        }
+        #sprite {
+            background-color: orange;
+            width: 215px;
+            height: 260px;
+            background-image: url(https://raw.githubusercontent.com/kostasx/EventLoop/master/LearnJavaScript/scrimba/zombie-walk/zombie-walk-2150x260.png);
+            background-position: 0 0;
+            background-color: transparent;
+            margin-bottom: -6px;
+        }
+        .walking {
+            animation-name: walking;
+            animation-duration: 0.8s;
+            animation-timing-function: steps(10);
+            animation-iteration-count: infinite;
+        }
+        #ground {
+            width: 100vw;
+            height: 100vh;
+            background-color: yellowgreen;
+        }
+        @keyframes walking {
+            0% {
+                background-position: 0 0;
+            }
+            100% {
+                background-position: -2150px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Sprites</h1>
+    <div id="sprite" class="walking"></div>
+    <div id="ground"></div>
+</body>
+</html>

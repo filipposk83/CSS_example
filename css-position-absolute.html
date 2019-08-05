@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Css Position: Absolute</title>
+    <style>
+        body {
+            background-color: #fff;
+            color: black;
+        }
+        #wrapper {
+            border: 4px dashed gray;
+            padding: 20px;
+            position: relative;
+        }
+        p {
+            background-color: hotpink;
+            padding: 5px;
+        }
+        p.one {
+            position: absolute;
+            left: 50px;
+            top: 50px;
+            background-color: skyblue;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Css Position: Absolute</h1>
+    <div id="wrapper">
+        <p class="one">One</p>
+        <p class="two">Two</p>
+    </div>
+</body>
+
+</html>

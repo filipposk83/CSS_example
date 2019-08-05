@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Transitions</title>
+    <style>
+        body {
+            background-color: #fff;
+            transition: all 500ms ease;
+            height: 100vh;
+            overflow: hidden;
+        }
+        #box1, #box2 {
+            border: 2px, solid, gray;
+            padding: 20px;
+            width: 200px;
+            margin-bottom: 20px;
+            background-color: #333;
+            transition: all 3s ease;
+            position: relative;
+        }
+        #box1 {
+            color: white;
+            left: 0px;
+        }
+        #box2 {
+            background-color: orange;
+            height: 50px;
+        }
+        #box1:hover {
+            left: 100px;
+            width: 150px;
+        }
+        #box2:hover {
+            background-color: limegreen;
+            height: 100px;
+        }
+        body:hover {
+            background-color: grey;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Transitions</h1>
+    <div id="box1">Box One</div>
+    <div id="box2">Box Two</div>
+</body>
+</html>

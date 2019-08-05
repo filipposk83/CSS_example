@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Sprites</title>
+    <!-- 2150px X 260px -->
+    <style>
+        body {
+            background-color: skyblue;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #sprite {
+            background-color: orange;
+            width: 215px;
+            height: 260px;
+            background-image: url(https://raw.githubusercontent.com/kostasx/EventLoop/master/LearnJavaScript/scrimba/zombie-walk/zombie-walk-2150x260.png);
+            background-position: 0 0;
+            background-color: transparent;
+            margin-bottom: -6px;
+            position: relative;
+            left: 0;
+        }
+
+        .walking {
+            animation-name: walking;
+            animation-duration: 0.8s;
+            animation-timing-function: steps(10);
+            animation-iteration-count: infinite;
+        }
+
+        #ground {
+            width: 100vw;
+            height: 100vh;
+            background-color: yellowgreen;
+        }
+
+        @keyframes walking {
+            0% {
+                background-position: 0 0;
+            }
+
+            100% {
+                background-position: -2150px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS Sprites</h1>
+    <div id="sprite" class="walking"></div>
+    <div id="ground"></div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script>
+        function init($) {
+
+            const sprite = $("#sprite");
+            let position = 0;
+            // 1) Add keydown event handlers
+            $(document.body).on("keydown", handleKeydown);
+
+            // 2) Add keyup event handler
+            // 2.1) On keyUp, remove class 'walking' from sprite
+            $(document.body).on("keyup", handleKeyup);
+
+            function handleKeydown(event) {
+                // $("#ground").text(event.keyCode); ---> gia na vroume tous kodikous twn pliktrwn
+                // left: 37
+                if (event.keyCode === 37) {
+                    position -= 10;
+                    sprite.addClass("walking");
+                    sprite.css({left:position + "px", transform: "scale(-1, 1)"});
+                }
+
+                // rigth: 39
+                if (event.keyCode === 39) {
+                    position += 10;
+                    sprite.addClass("walking");
+                    sprite.css({left:position + "px", transform: "scale(1)"});
+                }
+            }
+
+            function handleKeyup(){
+                sprite.removeClass("walking");
+            }
+
+        }
+
+        jQuery(document).ready(init);
+        // Shortcut
+        // a) jQuery(init);
+        // b) $(init);
+    </script>
+</body>
+
+</html>

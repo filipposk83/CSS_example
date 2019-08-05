@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Basic Website Layout using Flexbox</title>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <!-- Google Web Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,400i,700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Raleway', sans-serif;
+
+        }
+        h2 {
+            font-weight: 400;
+        }
+        header {
+            background: tomato;
+            height: 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 50px;
+        }
+        header .logo a{
+            color: white;
+        }
+        header nav ul {
+            list-style: none;
+            color: white;
+            display: flex;
+        }
+        header nav ul li {
+            margin-left: 50px;
+            transition: all 600ms ease;
+        }
+        header nav ul li:hover {
+            color: black;
+        }
+        .container {
+            max-width: 960px;
+            margin-left: auto;
+            margin-right: auto;
+            margin: 0 auto;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        section {
+            background: gray;
+            height: 100px;
+            flex-grow: 1;
+            display: flex;
+        }
+        main {
+            background: lightgrey;
+            padding: 50px;
+        }
+        aside {
+            min-width: 20%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        footer {
+            background: yellowgreen;
+            height: 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 50px;
+        }
+        .social {
+            display: flex;
+            width: 200px;
+            justify-content: space-between;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <!-- HEADER -->
+        <header>
+            <!-- LOGO -->
+            <div class="logo">
+                <a href="/"><i class="fab fa-4x fa-adversal"></i></a>
+            </div>
+            <!-- NAV MENU -->
+            <nav>
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Blog</li>
+                    <li>Contact</li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- MAIN SECTION -->
+        <section>
+
+            <!-- SIDEBAR -->
+            <aside>ASIDE</aside>
+
+            <!-- CONTENT -->
+            <main>
+                <h2>Article Title</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus iste mollitia minima a similique? Aliquam, molestias. Eveniet asperiores tempore iure, similique dolore natus debitis voluptates architecto, mollitia, commodi incidunt obcaecati.</p>
+            </main>
+
+        </section>
+
+        <!-- FOOTER -->
+        <footer>
+            <p>&copy; Copyright 2019 AFDEMP</p>
+            <div class="social">
+                    <i class="fab fa-lg fa-facebook-square"></i>
+                    <i class="fab fa-lg fa-twitter-square"></i>
+                    <i class="fab fa-lg fa-instagram"></i>
+                    <i class="fab fa-lg fa-youtube-square"></i>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>

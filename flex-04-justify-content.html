@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flex-Justify-Content</title>
+    <style>
+        p,
+        div {
+            border: 1px solid gray;
+        }
+        p {
+            border-color: orange;
+            overflow: visible;
+
+        }
+        .flex-wrapper {
+            display: flex;
+        }
+        span {
+            border: 1px solid green;
+        }
+        .row {
+            flex-direction: row;
+            justify-content: flex-start;
+            justify-content: flex-end;
+            justify-content: center;
+            justify-content: space-between;
+            justify-content: space-around;
+            justify-content: space-evenly;
+            /* flex-direction: column; */
+            /* justify-content works on the vertical axis when
+                direction is column */
+
+        }
+        .column {
+            flex-direction: column;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>Display Flex & Flex Direction</h1>
+    <p>Today the weather is fine.</p>
+    <div class="flex-wrapper row">
+        <p>One</p>
+        <p>Two</p>
+        <p>Three</p>
+    </div>
+    <div class="flex-wrapper column">
+        <p>One</p>
+        <p>Two</p>
+        <p>Three</p>
+    </div>
+    <p>Another Text</p>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flex01</title>
+    <style>
+        p,
+        div {
+            border: 1px solid gray;
+        }
+        p {
+            border-color: orange;
+
+        }
+        .flex-wrapper {
+            width: 400px;
+            display: flex;
+        }
+        span {
+            border: 1px solid green;
+        }
+        .row {
+            flex-direction: row;
+        }
+        .row-reverse {
+            flex-direction: row-reverse;
+        }
+        .column {
+            flex-direction: column;
+        }
+        .column-reverse {
+            flex-direction: column-reverse;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>Display Flex & Flex Direction</h1>
+    <p>Today the weather is fine.</p>
+    <div class="flex-wrapper row">
+        <p>One</p>
+        <p>Two</p>
+        <p>Three</p>
+    </div>
+    <div class="flex-wrapper row-reverse">
+        <p>One</p>
+        <p>Two</p>
+        <p>Three</p>
+    </div>
+    <div class="flex-wrapper column">
+        <p>One</p>
+        <p>Two</p>
+        <p>Three</p>
+    </div>
+    <div class="flex-wrapper column-reverse">
+        <p>One</p>
+        <p>Two</p>
+        <p>Three</p>
+    </div>
+    <p>Another Text</p>
+</body>
+
+</html>

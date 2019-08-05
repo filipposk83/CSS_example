@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Position: Relative</title>
+    <style>
+        body {
+            background-color: #fff;
+            color: black;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+        h1 {
+            margin: 20px;
+
+            /* margin-top: */
+            /* margin-right:  */
+            /* margin-bottom:  */
+            /* margin-left:  */
+            /* Clockwise: top, right, bottom, left */
+        }
+        h1, p {
+            background-color: orange;
+        }
+        span {
+            background-color: indigo;
+            color: white;
+        }
+        p {
+            /* default value */
+            position: static;
+
+            position: relative;
+            left: 50px;
+            /* left, top, bottom, right */
+        }
+        p.custom {
+            left: 0;
+            border: 5px solid yellow;
+            margin-left: 20px;
+            margin-right: 20px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Position: Relative</h1>
+
+    <p>Text <span>Inline</span> some text</p>
+    <p class="custom">Custom Text here....</p>
+    
+</body>
+</html>
